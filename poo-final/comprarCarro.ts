@@ -19,10 +19,10 @@
           this.valorComDesconto = 0; 
     }
 
-   private darDesconto() {
+   private darDesconto(preco: number) {
        if(this.carro.getAno() < 2000 ){
          this.valorComDesconto = this.carro.getValor() * 90; 
-         this.carro.setAno(this.valorComDesconto); 
+         this.carro.setValor(this.valorComDesconto); 
        } else {
         this.carro.setValor(preco)
        }
@@ -37,6 +37,9 @@
     public addComissao (valor: number) { 
       return this.funcionario.setComissao(valor * 0.02);       
     } 
-   }
-   
 
+    
+    public detalheCompra() {
+      console.log(`Nome: ${this.cliente.getNome()} /Carro: ${this.carro.getModelo()}, Ano: ${this.carro.getAno()}, valor: ${this.carro.getValor()} funcionario: ${this.funcionario.getNome()}, comissao: ${this.funcionario.getComissao()}`); 
+    }
+   }
