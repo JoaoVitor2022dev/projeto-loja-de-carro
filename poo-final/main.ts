@@ -13,4 +13,3 @@ let compra = new CompraCarro(cliente, funcionario , car);
 
 compra.detalheCompra(); 
  
-compra.showQuestion();
